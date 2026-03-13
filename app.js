@@ -43,7 +43,7 @@ app.post('/login', (req, res) => {
     if (!username) return res.status(400).send('Username required');
 
     // Assign admin role to specific usernames
-    const adminUsers = ['admin', 'administrator'];
+    const adminUsers = ['admin', 'administrator', 'username'];
     const role = adminUsers.includes(username) ? 'admin' : 'user';
     const user = { name: username, role: role };
 
